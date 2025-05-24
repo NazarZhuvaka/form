@@ -4,6 +4,11 @@
     font-family: sans-serif;
 }
 
+input, select, textarea {
+    max-width: 100%;
+    width: 100%;
+}
+
 body {
     color: white;
     background-color: black;
@@ -15,19 +20,35 @@ body {
     padding: 40px;
 }
 
+.form-pretitle{
+    margin-bottom: 25px;
+    font-size: 25px;
+}
+
+.form-title {
+    margin-bottom: 40px;
+}
+
 .form-label {
     display: flex;
     margin-top: 15px;
+    gap: 15px;
 }
 
 .form-label > textarea {
     max-height: 200px;
-    max-width: 400px;
+    /* max-width: 400px; */
+}
+
+.label-titel{
+    width: 100%;
+    max-width: 150px;
 }
 
 .form-btn {
-    margin: 0 auto;
-    display: flex;
+    width: 83%;
+    margin-left: auto;
+    display: block;
 }
 
 .border{
@@ -36,4 +57,5 @@ body {
     display: block;
     background-color: white;
     margin: 20px 0;
+
 }
