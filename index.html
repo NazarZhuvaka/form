@@ -4,24 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/index.js" defer></script>
 </head>
 <body>
-    <div class="form-container">
-        <h1>Contact form</h1>
-        <p>Please fill in your information and we`ll be sending your order</p>
+    <main class="form-container">
+        <h1 class="form-pretitle">Contact form</h1>
+        <p class="form-title">Please fill in your information and we`ll be sending your order</p>
         <form action="">
-            <label for="">
+            <label class="form-label" for="">
                 <p>Your name</p>
-                <input name="first-name" type="text">
-                <input name="last-name" type="text">
+                <input name="first-name" type="text" placeholder="first name">
+                <input name="last-name" type="text" placeholder="last name">
             </label>
-            <label for="">
+            <label class="form-label" for="">
                 <p>Your email</p>
-                <input type="email" name="email">
+                <input type="email" name="email" placeholder="your_mail@mail.com">
             </label>
+            <label class="form-label" for="">
+                <p>Phone *</p>
+                <input type="text" name="phone" required placeholder="000">
+                <input type="text" name="phone" required placeholder="000">
+                <input type="text" name="phone" required placeholder="0000">
+            </label>
+            <label class="form-label" for="">
+                <p>Message subject *</p>
+                <select name="" id="" required>
+                    <option value="other">Other</option>
+                    <option value="other">Other</option>
+                    <option value="other">Other</option>
+                    <option value="other">Other</option>
+                    <option value="other">Other</option>
+                    <option value="other">Other</option>
+                </select>
+            </label>
+            <label class="form-label" for="">
+                Message *
+                <textarea name="" id="" required></textarea>
+            </label>
+            <span class="border"></span>
+            <button class="form-btn" type="submit">Submit form</button>
         </form>
-    </div>
+    </main>
 </body>
 </html>
