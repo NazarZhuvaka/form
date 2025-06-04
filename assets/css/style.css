@@ -14,11 +14,38 @@ textarea {
   max-width: 100%;
   width: 100%;
   padding: var(--m-pading);
+  border: none;
+}
+
+input:valid,
+textarea:valid,
+select:valid {
+  border: 2px solid green;
+  outline: none;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border: 2px solid red;
+  outline: none;
+}
+
+input,
+textarea,
+select {
+  border: 2px solid #ccc;
+  padding: 6px;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
 }
 
 body {
   color: white;
-  background-color: black;
+  /* background-color: black; */
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2glMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+  object-fit: cover;
+  background-position: center;
 }
 
 .form-container {
@@ -26,6 +53,16 @@ body {
   margin: 0 auto;
   padding: 40px;
   border: 1px solid;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  box-shadow: 5px 5px var(--s-large) black;
+
+  color: black;
 }
 
 .form-pretitle {
@@ -59,6 +96,13 @@ body {
   display: block;
   padding: var(--m-pading);
   font-size: 16px;
+
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
 }
 
 .border {

@@ -1,50 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/index.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <main class="form-container">
-        <h1 class="form-pretitle">Contact form</h1>
-        <p class="form-title">Please fill in your information and we`ll be sending your order</p>
-        <form action="">
-            <label class="form-label" for="">
-                <p class="label-titel">Your name</p>
-                <input name="first-name" type="text" placeholder="first name">
-                <input name="last-name" type="text" placeholder="last name">
-            </label>
-            <label class="form-label" for="">
-                <p class="label-titel">Your email</p>
-                <input type="email" name="email" placeholder="your_mail@mail.com">
-            </label>
-            <label class="form-label" for="">
-                <p class="label-titel">Phone *</p>
-                <input type="text" name="phone" required placeholder="000">
-                <input type="text" name="phone" required placeholder="000">
-                <input type="text" name="phone" required placeholder="0000">
-            </label>
-            <label class="form-label" for="">
-                <p class="label-titel">Message subject *</p>
-                <select name="select" id="" required>
-                    <option value="other">Other</option>
-                    <option value="other">Other</option>
-                    <option value="other">Other</option>
-                    <option value="other">Other</option>
-                    <option value="other">Other</option>
-                    <option value="other">Other</option>
-                </select>
-            </label>
-            <label class="form-label" for="">
-                <p class="label-titel">Message *</p>
-                <textarea name="" id="" required></textarea>
-            </label>
-            <span class="border"></span>
-            <button class="form-btn" type="submit">Submit form</button>
-        </form>
+      <h1 class="form-pretitle">Contact form</h1>
+      <p class="form-title">
+        Please fill in your information and we`ll be sending your order
+      </p>
+      <form id="myform" action="">
+        <label class="form-label">
+          <p class="label-titel">Your name</p>
+          <input
+            name="first-name"
+            type="text"
+            placeholder="First name"
+            required
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            minlength="2"
+            maxlength="30"
+          />
+          <input
+            name="last-name"
+            type="text"
+            placeholder="Last name"
+            required
+            pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?"
+            minlength="2"
+            maxlength="30"
+          />
+        </label>
+
+        <label class="form-label">
+          <p class="label-titel">Your email</p>
+          <input
+            type="email"
+            name="email"
+            placeholder="your_mail@mail.com"
+            required
+          />
+        </label>
+
+        <label class="form-label">
+          <p class="label-titel">Phone *</p>
+          <input
+            type="text"
+            name="phone"
+            required
+            placeholder="123"
+            pattern="\d{3}"
+          />
+          <input
+            type="text"
+            name="phone"
+            required
+            placeholder="456"
+            pattern="\d{3}"
+          />
+          <input
+            type="text"
+            name="phone"
+            required
+            placeholder="7890"
+            pattern="\d{4}"
+          />
+        </label>
+
+        <label class="form-label">
+          <p class="label-titel">Message subject *</p>
+          <select name="select" required>
+            <option value="" > Choose item </option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support</option>
+            <option value="billing">Billing</option>
+            <option value="partnership">Partnership</option>
+            <option value="career">Career</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label class="form-label">
+          <p class="label-titel">Message *</p>
+          <textarea
+            name="message"
+            required
+            minlength="10"
+            maxlength="500"
+            placeholder="Write your message here..."
+          ></textarea>
+        </label>
+        <span class="border"></span>
+        <button class="form-btn" type="submit">Submit form</button>
+      </form>
     </main>
-</body>
+  </body>
 </html>
