@@ -3,6 +3,9 @@ const form = document.querySelector("#myform");
 
 form.addEventListener("submit", sumbitHandler);
 
+
+// <------------------------- Цікаво чи правильно виконав завдання із зірочкою. Чи є кращий спосіб ------------------------------>
+
 function sumbitHandler(e) {
   e.preventDefault();
   const { target } = e;
