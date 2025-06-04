@@ -1,61 +1,70 @@
-@import './reset.css';
+@import "./reset.css";
 
-:root{
-    font-family: sans-serif;
+:root {
+  font-family: sans-serif;
+
+  --m-pading: 10px;
+  --s-medium: 15px;
+  --s-large: 25px;
 }
 
-input, select, textarea {
-    max-width: 100%;
-    width: 100%;
+input,
+select,
+textarea {
+  max-width: 100%;
+  width: 100%;
+  padding: var(--m-pading);
 }
 
 body {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 .form-container {
-    max-width: 55%;
-    margin: 0 auto;
-    padding: 40px;
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid;
 }
 
-.form-pretitle{
-    margin-bottom: 25px;
-    font-size: 25px;
+.form-pretitle {
+  margin-bottom: var(--s-large);
+  font-size: var(--s-large);
 }
 
 .form-title {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .form-label {
-    display: flex;
-    margin-top: 15px;
-    gap: 15px;
+  display: flex;
+  margin-top: var(--s-medium);
+  gap: var(--s-medium);
 }
 
 .form-label > textarea {
-    max-height: 200px;
-    /* max-width: 400px; */
+  max-height: 200px;
+  /* max-width: 400px; */
 }
 
-.label-titel{
-    width: 100%;
-    max-width: 150px;
+.label-titel {
+  width: 100%;
+  max-width: 150px;
 }
 
 .form-btn {
-    width: 83%;
-    margin-left: auto;
-    display: block;
+  width: 83%;
+  margin-left: auto;
+  display: block;
+  padding: var(--m-pading);
+  font-size: 16px;
 }
 
-.border{
-    width: 100%;
-    height: 1px;
-    display: block;
-    background-color: white;
-    margin: 20px 0;
-
+.border {
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: white;
+  margin: 20px 0;
 }
